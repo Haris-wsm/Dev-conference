@@ -1,0 +1,51 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Conference meeting api",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development nodemon src/index.js",
+    "prod": "cross-env NODE_ENV=production node src/index.js",
+    "test": "cross-env NODE_ENV=test jest --watch --verbose"
+  },
+  "jest": {
+    "watchPlugins": [
+      "jest-watchtypeahead/filename",
+      "jest-watch-typeahead/testname"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/nodemodules/",
+      "<rootDir>/config"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "mongoose": "^6.5.4",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.2",
+    "node-localstorage": "^2.2.1",
+    "nodemailer": "^6.7.8",
+    "socket.io": "^4.5.2",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "jest": "^29.0.3",
+    "jest-watch-typeahead": "^2.2.0",
+    "nodemon": "^2.0.19",
+    "smtp-server": "^3.11.0",
+    "supertest": "^6.2.4"
+  }
+}

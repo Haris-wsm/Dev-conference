@@ -1,0 +1,52 @@
+POST http://localhost:3000/backend/api/users/registeroneid HTTP/1.0
+Content-Type: application/json
+
+{
+	"username": "haris567",
+	"password": "P4ssword",
+	"passwordconfirm": "P4ssword",
+	"name": "Harris",
+	"lastname": "Waesamah",
+	"phonenumber": "0629384929",
+	"company": "inet"
+}
+
+###
+
+POST http://localhost:3000/backend/api/auth/loginCollabMail HTTP/1.0
+Content-Type: application/json
+
+{
+	"one_collab_mail": "harris.waes_2311@thai.com",
+	"password": "P4ssword"
+}
+
+
+###
+
+POST http://localhost:3000/backend/api/auth/loginoneid HTTP/1.0
+Content-Type: application/json
+
+{
+	"username": "haris567",
+	"password": "P4ssword"
+}
+###
+
+POST http://localhost:3000/backend/api/auth/collab HTTP/1.0
+Content-Type: application/json
+
+{
+	"email": "harris.waes_2311@thai.com",
+	"password": "P4ssword"
+}
+###
+
+POST http://localhost:3000/backend/api/auth/refreshToken HTTP/1.0
+Content-Type: application/json
+
+{
+	"username": "haris567",
+	"email": "harris.waes_2311@thai.com",
+	"password": "P4ssword"
+}
